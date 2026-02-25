@@ -1,0 +1,539 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --beige: #e8e4dc;
+    --dark-beige: #d4cfc4;
+    --brown: #8b7355;
+    --dark-brown: #5a4a3a;
+    --accent: #c9a882;
+}
+
+body {
+    font-family: 'Caveat', cursive;
+    background: var(--beige);
+    color: var(--dark-brown);
+    overflow-x: hidden;
+    overflow-y: auto;
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2rem 3rem;
+    z-index: 100;
+}
+
+.brand {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 600;
+    color: var(--dark-brown);
+    letter-spacing: 0.02em;
+    opacity: 0;
+    animation: slideInLeft 1.2s ease-out 0.2s forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Decorative shapes */
+.decorative-shapes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.shape {
+    position: absolute;
+    font-size: 3rem;
+    opacity: 0.3;
+    color: var(--accent);
+}
+
+.flower-1 {
+    top: 12%;
+    left: 10%;
+    font-size: 3.5rem;
+    color: var(--brown);
+    animation: float 6s ease-in-out infinite, rotate 12s linear infinite;
+}
+
+.flower-2 {
+    top: 20%;
+    right: 15%;
+    font-size: 4rem;
+    color: var(--accent);
+    animation: float 7s ease-in-out infinite 1s, rotate 15s linear infinite reverse;
+}
+
+.flower-3 {
+    bottom: 25%;
+    left: 8%;
+    font-size: 3rem;
+    color: var(--brown);
+    animation: float 8s ease-in-out infinite 2s, rotate 10s linear infinite;
+}
+
+.flower-4 {
+    bottom: 15%;
+    right: 20%;
+    font-size: 3.5rem;
+    color: var(--accent);
+    animation: float 6.5s ease-in-out infinite 1.5s, rotate 14s linear infinite reverse;
+}
+
+.flower-5 {
+    top: 45%;
+    left: 5%;
+    font-size: 3rem;
+    color: var(--brown);
+    animation: float 7.5s ease-in-out infinite 3s, rotate 13s linear infinite;
+}
+
+.flower-6 {
+    top: 70%;
+    left: 25%;
+    font-size: 3.2rem;
+    color: var(--accent);
+    animation: float 6s ease-in-out infinite 2.5s, rotate 11s linear infinite reverse;
+}
+
+.flower-7 {
+    top: 55%;
+    right: 25%;
+    font-size: 3.8rem;
+    color: var(--brown);
+    animation: float 8s ease-in-out infinite 1s, rotate 16s linear infinite;
+}
+
+.flower-8 {
+    bottom: 40%;
+    right: 5%;
+    font-size: 3.3rem;
+    color: var(--accent);
+    animation: float 7s ease-in-out infinite 3.5s, rotate 12s linear infinite reverse;
+}
+
+.heart-1 {
+    top: 35%;
+    left: 20%;
+    font-size: 2.5rem;
+    color: var(--brown);
+    animation: float 5s ease-in-out infinite 0.5s, pulse 2s ease-in-out infinite;
+}
+
+.heart-2 {
+    top: 60%;
+    right: 12%;
+    font-size: 3rem;
+    color: var(--accent);
+    animation: float 7s ease-in-out infinite 2.5s, pulse 2.5s ease-in-out infinite;
+}
+
+.heart-3 {
+    bottom: 35%;
+    right: 8%;
+    font-size: 2.8rem;
+    color: var(--brown);
+    animation: float 6s ease-in-out infinite 1s, pulse 3s ease-in-out infinite;
+}
+
+.heart-4 {
+    top: 25%;
+    left: 35%;
+    font-size: 2.6rem;
+    color: var(--accent);
+    animation: float 5.5s ease-in-out infinite 1.8s, pulse 2.8s ease-in-out infinite;
+}
+
+.heart-5 {
+    bottom: 50%;
+    left: 15%;
+    font-size: 2.4rem;
+    color: var(--brown);
+    animation: float 6.5s ease-in-out infinite 3s, pulse 2.2s ease-in-out infinite;
+}
+
+.heart-6 {
+    top: 80%;
+    right: 30%;
+    font-size: 2.9rem;
+    color: var(--accent);
+    animation: float 7.5s ease-in-out infinite 0.8s, pulse 3.2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Main container */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+.content {
+    text-align: center;
+    max-width: 900px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Typography */
+.title {
+    font-size: clamp(4rem, 12vw, 9rem);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 1rem;
+    color: var(--dark-brown);
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 0.3s forwards;
+    position: relative;
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
+.subtitle {
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    color: var(--brown);
+    font-weight: 400;
+    font-style: italic;
+    margin-top: 2rem;
+    letter-spacing: 0.02em;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 0.6s forwards;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        padding: 1.5rem 2rem;
+    }
+    
+    .brand {
+        font-size: 1.1rem;
+    }
+    
+    .shape {
+        opacity: 0.2;
+        font-size: 2rem;
+    }
+    
+    .flower-1, .flower-2, .flower-3, .flower-4, .flower-5, .flower-6, .flower-7, .flower-8 {
+        font-size: 2.5rem;
+    }
+    
+    .heart-1, .heart-2, .heart-3, .heart-4, .heart-5, .heart-6 {
+        font-size: 2rem;
+    }
+}
+
+/* Kintsugi Section */
+.kintsugi-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(to bottom, var(--beige), var(--dark-beige));
+    position: relative;
+    z-index: 10;
+}
+
+.kintsugi-content {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.kintsugi-title {
+    grid-column: 1 / -1;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 600;
+    color: var(--dark-brown);
+    text-align: center;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease-out;
+}
+
+.kintsugi-title.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.kintsugi-text {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 1s ease-out 0.3s;
+}
+
+.kintsugi-text.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.kintsugi-text p {
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    color: var(--dark-brown);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.kintsugi-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 1s ease-out 0.6s;
+}
+
+.kintsugi-visual.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.plate {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, #f5f5f5, #e8e8e8);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.plate-svg {
+    width: 350px;
+    height: 350px;
+}
+
+/* Responsive for Kintsugi section */
+@media (max-width: 768px) {
+    .kintsugi-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .kintsugi-text p {
+        font-size: 1.2rem;
+    }
+    
+    .plate {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .plate-svg {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* Poll Section */
+.poll-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    background: var(--beige);
+    position: relative;
+    z-index: 10;
+}
+
+.poll-container {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease-out;
+}
+
+.poll-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.poll-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 600;
+    color: var(--dark-brown);
+    margin-bottom: 3rem;
+}
+
+.poll-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.poll-option {
+    background: rgba(255, 255, 255, 0.6);
+    border: 2px solid var(--brown);
+    padding: 1.5rem 2rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
+    color: var(--dark-brown);
+    position: relative;
+    overflow: hidden;
+}
+
+.poll-option:hover {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.poll-option.voted {
+    pointer-events: none;
+}
+
+.poll-option::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, rgba(212, 175, 55, 0.2), rgba(201, 168, 130, 0.2));
+    transition: width 0.8s ease;
+    z-index: 0;
+}
+
+.poll-option.voted::before {
+    width: var(--percentage, 0%);
+}
+
+.poll-emoji {
+    font-size: 2rem;
+    z-index: 1;
+}
+
+.poll-text {
+    flex: 1;
+    text-align: left;
+    z-index: 1;
+}
+
+.poll-percentage {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--accent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.poll-option.voted .poll-percentage {
+    opacity: 1;
+}
+
+.poll-votes {
+    font-size: 1.2rem;
+    color: var(--brown);
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+/* Responsive for Poll section */
+@media (max-width: 768px) {
+    .poll-title {
+        font-size: 2rem;
+    }
+    
+    .poll-option {
+        padding: 1.2rem 1.5rem;
+        font-size: 1.3rem;
+    }
+    
+    .poll-emoji {
+        font-size: 1.5rem;
+    }
+}

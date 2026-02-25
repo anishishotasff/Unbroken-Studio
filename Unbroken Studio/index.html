@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unbroken Studio | Coming Soon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="decorative-shapes">
+        <div class="shape flower-1">✿</div>
+        <div class="shape flower-2">❀</div>
+        <div class="shape flower-3">✾</div>
+        <div class="shape flower-4">✿</div>
+        <div class="shape flower-5">❀</div>
+        <div class="shape flower-6">✾</div>
+        <div class="shape flower-7">✿</div>
+        <div class="shape flower-8">❀</div>
+        <div class="shape heart-1">♡</div>
+        <div class="shape heart-2">♥</div>
+        <div class="shape heart-3">♡</div>
+        <div class="shape heart-4">♥</div>
+        <div class="shape heart-5">♡</div>
+        <div class="shape heart-6">♥</div>
+    </div>
+    
+    <header class="header">
+        <div class="brand">Unbroken Studio</div>
+    </header>
+    
+    <main class="container">
+        <div class="content">
+            <h1 class="title">Coming Soon</h1>
+            <p class="subtitle">Healing, one piece at a time</p>
+        </div>
+    </main>
+
+    <section class="kintsugi-section">
+        <div class="kintsugi-content">
+            <h2 class="kintsugi-title">The Art of Kintsugi</h2>
+            <div class="kintsugi-text">
+                <p>In the ancient Japanese art of Kintsugi, broken pottery is repaired with gold, transforming cracks into beautiful seams of precious metal.</p>
+                <p>Rather than hiding the damage, Kintsugi celebrates it—honoring the history of the object and making it more valuable than before.</p>
+                <p>The philosophy teaches us that breakage and repair are part of the story, not something to disguise. Every crack tells a tale of resilience.</p>
+                <p>When a plate shatters, it's not the end. It's an opportunity to create something even more beautiful—a testament to strength, healing, and transformation.</p>
+            </div>
+            <div class="kintsugi-visual">
+                <svg class="plate-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Plate background -->
+                    <circle cx="200" cy="200" r="190" fill="#ffffff" filter="url(#shadow)"/>
+                    <circle cx="200" cy="200" r="190" fill="url(#plateGradient)"/>
+                    
+                    <!-- Inner plate rim -->
+                    <circle cx="200" cy="200" r="120" fill="none" stroke="#f0f0f0" stroke-width="1" opacity="0.3"/>
+                    
+                    <!-- Golden cracks -->
+                    <!-- Top cracks -->
+                    <path d="M 200 10 L 180 120 L 200 200" stroke="#d4af37" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    <path d="M 200 10 L 220 100 L 200 200" stroke="#c9a882" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    
+                    <!-- Right cracks -->
+                    <path d="M 390 200 L 280 180 L 200 200" stroke="#d4af37" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    <path d="M 380 240 L 270 220 L 200 200" stroke="#c9a882" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    
+                    <!-- Bottom cracks -->
+                    <path d="M 200 390 L 210 280 L 200 200" stroke="#d4af37" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    <path d="M 160 380 L 180 270 L 200 200" stroke="#c9a882" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    
+                    <!-- Left cracks -->
+                    <path d="M 10 200 L 120 190 L 200 200" stroke="#d4af37" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    <path d="M 20 160 L 130 180 L 200 200" stroke="#c9a882" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    
+                    <!-- Center connecting cracks -->
+                    <path d="M 180 120 L 200 200 L 280 180" stroke="#d4af37" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    <path d="M 220 100 L 200 200 L 210 280" stroke="#c9a882" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    <path d="M 120 190 L 200 200 L 270 220" stroke="#d4af37" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    
+                    <!-- Gradients and filters -->
+                    <defs>
+                        <radialGradient id="plateGradient">
+                            <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+                            <stop offset="70%" style="stop-color:#f8f8f8;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#f0f0f0;stop-opacity:1" />
+                        </radialGradient>
+                        <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur in="SourceAlpha" stdDeviation="10"/>
+                            <feOffset dx="0" dy="10" result="offsetblur"/>
+                            <feComponentTransfer>
+                                <feFuncA type="linear" slope="0.2"/>
+                            </feComponentTransfer>
+                            <feMerge>
+                                <feMergeNode/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section class="poll-section">
+        <div class="poll-container">
+            <h2 class="poll-title">Are you excited for this?</h2>
+            <div class="poll-options">
+                <button class="poll-option" data-option="yes">
+                    <span class="poll-emoji">✨</span>
+                    <span class="poll-text">Yes, can't wait!</span>
+                    <span class="poll-percentage">0%</span>
+                </button>
+                <button class="poll-option" data-option="maybe">
+                    <span class="poll-emoji">🤔</span>
+                    <span class="poll-text">Maybe, tell me more</span>
+                    <span class="poll-percentage">0%</span>
+                </button>
+                <button class="poll-option" data-option="curious">
+                    <span class="poll-emoji">💭</span>
+                    <span class="poll-text">Curious to learn</span>
+                    <span class="poll-percentage">0%</span>
+                </button>
+            </div>
+            <p class="poll-votes">0 votes</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
